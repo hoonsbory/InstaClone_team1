@@ -116,7 +116,7 @@ window.onload = function(){
 							img.setAttribute("width" , "300");
 							img.setAttribute("alt" , "instapic");
 							img.setAttribute("class" , "mainimg");
-							a.setAttribute("href" , "post.do?id="+data[count].postid);
+							a.setAttribute("href" , "showPost.do?post_id="+data[count].postid);
 							
 							$(a).addClass("apic");
 							document.querySelector("#divmain"+countdiv).lastElementChild.appendChild(img);
@@ -144,9 +144,6 @@ window.onload = function(){
 				
 				})
 		    }
-
-
-
 		
 		  
 		  
@@ -154,40 +151,22 @@ window.onload = function(){
 	
 	
 	  $('#up_cancel').click(function() {
-
 			location.href = 'home.do';
-
 		});
-
 		// 글자 등록 
-
 		$('#up_submit').click(insertPost);
-
 		$('#content').keyup(countPost);
-
-
 	function insertPost() {
-
 		let str = $("#content").val();
-
 		str = str.replace(/(?:\r\n|\r|\n)/g, '<br />'); //엔터 처리
-
 		$("#content").val(str);
-
 		$('#insertForm').submit();
-
 	};
-
 	function countPost() {
-
 		let textLength = $(this).val().length;
-
 		$('#textCount').text(textLength + '/150');
-
 		if (textLength > 150) {
-
 			$(this).val($(this).val().substr(0, 150));
-
 		}
 	}
 		
@@ -200,13 +179,10 @@ window.onload = function(){
 		
 	})
 	
-
 	
 $("#myfile").change(function() {
 	        readURL(this);
 		});
-
-
 	function readURL(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
@@ -218,14 +194,12 @@ $("#myfile").change(function() {
     }
 	
 	var fileTarget = $('.filebox .upload-hidden');
-
     fileTarget.on('change', function(){
         if(window.FileReader){
             var filename = $(this)[0].files[0].name;
         } else {
             var filename = $(this).val().split('/').pop().split('\\').pop();
         }
-
         $(this).siblings('.upload-name').val(filename);
     });
     
@@ -247,7 +221,6 @@ $("#myfile").change(function() {
 body {
 	margin: 10px
 }
-
 .where {
 	display: block;
 	margin: 25px 15px;
@@ -263,7 +236,6 @@ a:hover{
 }
 #btnEdit2{
 	margin-top: 5px !important;
-
 }
 .profile-user-name{
 	color : black;
@@ -278,7 +250,6 @@ a:hover{
 	clip: rect(0, 0, 0, 0);
 	border: 0;
 }
-
 #upload_label {
 	text-align: center;
 	height: 50px !important;
@@ -290,7 +261,6 @@ a:hover{
 	position: relative;
 	left: 15%;
 }
-
 #btn3 {
 	height: 50px !important;
 	width: 70% !important;
@@ -299,7 +269,6 @@ a:hover{
 	left: 15%;
 	margin-bottom: 7px;
 }
-
 .uploadpostimage {
 	width: 400px;
 	max-height: calc(100% - 40px);
@@ -317,7 +286,6 @@ a:hover{
 	left: 40%;
 	top: 5%;
 }
-
 .uploadpostimage label {
 	display: inline-block;
 	padding: .5em .75em;
@@ -331,7 +299,6 @@ a:hover{
 	border-bottom-color: #e2e2e2;
 	border-radius: .25em;
 }
-
 /* named upload */
 .uploadpostimage #myfile {
 	display: inline-block;
@@ -348,51 +315,42 @@ a:hover{
 	-moz-appearance: none;
 	appearance: none;
 }
-
 .uploadpostimage label {
 	color: #fff;
 	background-color: #337ab7;
 	border-color: #2e6da4;
 }
-
 #content {
 	display: block;
 	width: 100%;
 	height: 180px;
 	overflow-y: hidden;
 }
-
 #btnEdit2 {
 	background: #3897f0 !important;
 	color: white !important;
 }
-
 .apic {
 	display: inline !important;
 	margin-right: 28px;
 }
-
 .divmain {
 	display: inline-block !important;
 	position: relative;
 	left: 20%;
 	margin-bottom: 28px;
 }
-
 .mainimg {
 	display: inline;
 	width: 300px;
 	height: 300px;
 }
-
 .mainimg:hover {
 	opacity: 0.5;
 }
-
 .section1 {
 	margin-top: 30px;
 }
-
 .profile-edit-btn2 {
 	text-align: center;
 	font-size: 1.0rem;
@@ -429,7 +387,6 @@ a:hover{
 	color: white;
 	float: left;
 	z-index: 1;
-
 }
 .profile-edit-btn1, .profile-edit-btn0 {
 	right: 0;
@@ -450,11 +407,9 @@ a:hover{
 	float: left;
 	z-index: 1;
 }
-
 .default-page {
 	text-align: center;
 }
-
 #uploaddiv {
 	align-items: center;
 	background-color: rgba(0, 0, 0, .65);
@@ -472,7 +427,6 @@ a:hover{
 	z-index: 1;
 	display: none;
 }
-
 #img_preview {
 	width: 300px;
 	height: 300px;
@@ -480,7 +434,6 @@ a:hover{
 	left: 7%;
 	margin-bottom: 10px;
 }
-
 .button {
 	display: inline-block;
 	border-radius: 4px;
@@ -495,14 +448,12 @@ a:hover{
 	cursor: pointer;
 	margin: 5px;
 }
-
 .button span {
 	cursor: pointer;
 	display: inline-block;
 	position: relative;
 	transition: 0.5s;
 }
-
 .button span:after {
 	content: '\00bb';
 	position: absolute;
@@ -511,11 +462,9 @@ a:hover{
 	right: -20px;
 	transition: 0.5s;
 }
-
 .button:hover span {
 	padding-right: 25px;
 }
-
 .button:hover span:after {
 	opacity: 1;
 	right: 0;
