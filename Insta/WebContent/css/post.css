@@ -1,0 +1,202 @@
+@import url(//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css);
+
+#sect {
+	height: 600px;
+	width: 900px;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+#sect header{
+	float:left;
+	display:block;
+	width: 400px;
+	margin: 10px;
+}
+.container{
+	width:100%;
+	height: 510px;
+	clear:both;
+	display:block;
+	margin: 0 auto;
+}
+.uploadimage{
+	float:left;
+	vertical-align:middle;
+   	border:1px solid #bbb;
+   	border-right:none;
+    display: inline;
+    text-align: center;
+    width: 60%;
+    height: 100%;
+}
+.uploadimage img{
+	max-width: 100%;
+	height: 100%;
+	max-height: 510px;
+    object-fit: contain;
+}
+
+
+.detailBox {
+	vertical-align:middle;
+	display:inline;
+	float:right;
+	width:40%;
+	height: 100%;
+    border:1px solid #bbb;
+}
+.titleBox {
+    background-color:#fdfdfd;
+    padding:10px;
+}
+.titleBox label{
+  color:#444;
+  margin:0;
+  font-weight: bold;
+}
+
+.commentBox {
+	margin-top: 30px;
+    padding:10px 15px;
+    height: 70px;
+    overflow: auto;
+}
+
+.commentBox::-webkit-scrollbar-track {
+	background-color:#F5F5F5;
+}
+
+.commentBox::-webkit-scrollbar{
+	width:10px;
+	background-color:#F5F5F5;
+}
+
+.commentBox::-webkit-scrollbar-thumb{
+	background-color:#3399ff;
+}
+
+.commentBox .form-group:first-child, .actionBox .form-group:first-child {
+    width:80%;
+}
+.commentBox .form-group:nth-child(2), .actionBox .form-group:nth-child(2) {
+    width:18%;
+}
+.actionBox .form-group * {
+    width:100%;
+}
+
+.form-group2:first-child {
+    width:80%;
+    float:left;
+	margin-left: 5px;
+}
+.form-group2:nth-child(2) {
+    width:18%;
+    float:right;
+}
+.form-group2 * {
+    width:80%;
+}
+
+.taskDescription {
+    margin-top:10px;
+}
+.commentList {
+    padding:0;
+    list-style:none;
+    overflow:auto;
+    -ms-overflow-style: none;
+}
+
+.commentList::-webkit-scrollbar { 
+    display: none; 
+}
+
+.commentList li {
+    margin:0;
+    margin-top:10px;
+}
+.commentList li > div {
+    display:table-cell;
+}
+.commenterImage {
+    width:30px;
+    margin-right:5px;
+    height:30px;
+    float:left;
+}
+.commenterImage img {
+    width: 30px;
+    height: 30px;
+    border-radius:50%;
+}
+
+.commentText{
+	width: 370px;
+}
+.commentText p {
+    margin:0;
+}
+.sub-text {
+    color:#aaa;
+    font-family:verdana;
+    font-size:11px;
+}
+.actionBox {
+    border-top:1px dotted #bbb;
+    border-bottom:1px dotted #bbb;
+    padding:10px;
+	height: 280px;
+}
+.user-name{
+	display:inline;
+	float:left;
+	font-size: 20pt;
+	line-height: 20px;
+	padding: 12px 30px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.userImage {
+	display:inline;
+	float:left;
+    width:50px;
+    margin:10px;
+    margin-right: 0px;
+    float:left;
+}
+.userImage img {
+    width:100%;
+    border-radius:50%;
+}
+#follow-btn{
+	text-align: center;
+	font-size: 1.0rem;
+    font-weight: bold;
+    background-color: rgba(0,0,0,0);
+	line-height:1.6;
+	width: 100px;
+	border-radius:0.3rem;
+	padding: 0 0.8rem;
+	margin:20px auto;
+    border: 1px solid #3399ff;
+    color: #3399ff;
+    padding: 5px;
+}
+
+#follow-btn2{
+	text-align: center;
+	font-size: 1.0rem;
+    font-weight: bold;
+    background-color: #3399ff;
+	color: white;
+	line-height:1.6;
+	width: 100px;
+	border-radius:0.3rem;
+	padding: 0 0.8rem;
+	margin:20px auto;
+    border: 1px solid #3399ff;
+    padding: 5px;
+}

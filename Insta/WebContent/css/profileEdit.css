@@ -1,0 +1,260 @@
+@charset "UTF-8";
+
+#sect {
+	height: 600px;
+	width: 900px;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 50px;
+	margin-bottom: 80px;
+}
+
+#left {
+	float: left;
+	border: 1px solid gray;
+	width: 25%;
+	height: 600px;
+	padding-top: 50px;
+	display: inline !important; 
+	position: absolute;
+	
+}
+
+#center {
+	display: inline !important; 
+	border: 1px solid gray;
+	border-left: none;
+	width: 74%;
+	height:	600px;
+	text-align: center;
+	padding-top: 50px;
+	position: absolute;
+	margin-left: 30px;
+	left : 21%;
+}
+
+.error {
+	color: red;
+}
+
+
+#menu div {
+	padding: 20px;
+	padding-left: 50px;
+	border-left: 2px solid white;
+}
+
+#menu a {
+	text-align: left;
+	text-decoration : none;
+	font-size:13pt;
+	color: #575757;
+}
+
+#prof_form {
+	clear: both;
+}
+
+#prof_form table {
+	margin: 0 auto;
+	text-align: center;
+	width: 400px;
+}
+
+#prof_form tr, td {
+	height: 50px;
+	line-height: 50px;
+	vertical-align: middle;
+}
+
+#prof_form td input {
+	height: 30px;
+	width: 260px;
+	font-size:12pt;
+}
+
+#password_form {
+	margin-top: 50px;
+	text-align: center;
+}
+
+#password_form table {
+	border-collapse: collapse;
+	margin: 0 auto;
+	text-align: center;
+	width: 400px;
+}
+
+#password_form tr, td {
+	height: 50px;
+	line-height: 50px;
+	vertical-align: middle;
+}
+
+#password_form td {
+	min-width: 200px;
+}
+
+#password_form td input {
+	height: 30px;
+	width: 300px;
+	margin-left: 20px;
+	margin-right: 40px;
+	font-size:12pt;
+}
+
+#small_tr, #small_tr td {
+	height: 20px !important;
+	line-height: 20px;
+	vertical-align: top;
+	padding: 0;
+}
+
+#pattern {
+	font-size: 10pt;
+	color: #3399ff;
+	margin-left: 20px;
+	margin-right: 40px;
+}
+
+#submit_btn {
+	width: 120px;
+}
+
+#reset_btn {
+	width: 80px;
+}
+
+#msg_space{
+	text-align: center;
+	margin: 50px;
+}
+
+.input_name span{
+	font-weight: bold;
+	font-size: 12pt;
+	float:right;
+	margin-right: 20px;
+}
+
+.form_btn {
+	text-align: center;
+	width: 60px;
+	margin: 0 auto;
+	font-weight: bold;
+	border: 1px solid #3399ff;
+    background-color: rgba(0,0,0,0);
+    color: #3399ff;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form_btn:hover{
+	background-color: #3399ff;
+	color: white;
+}
+
+.footer{
+	clear: both;
+}
+
+#img_change_opt {
+	background-color: rgba(0, 0, 0, .5);
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 1;
+	visibility: hidden;
+	vertical-align: middle;
+}
+
+#img_change_opt>div {
+	border-radius: 20px;
+	width: 450px;
+	height: 250px;
+	margin: 0 auto;
+	margin-top: 18%;
+	text-align: center;
+	vertical-align: middle;
+	background-color: white;
+}
+
+#img_change_opt>div>div {
+	padding: 30px;
+	font-size: 15pt;
+	font-weight: bold;
+}
+
+#imgForm hr {
+	margin: 0;
+}
+
+#imgForm div {
+	height: 35pt;
+	line-height: 35pt;
+}
+
+#imgForm label {
+	font-size: 12pt;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+#upload_label {
+	color: #3399ff;
+}
+
+#delete_label {
+	color: #ff3300;
+}
+
+#cancel {
+	font-size: 12pt;
+	font-weight: bold;
+	cursor: pointer;
+	margin: 12px;
+}
+
+#myfile, #delete {
+	display: none;
+}
+
+#prof_info {
+	width: 60%;
+	height: 15%;
+	margin: 30px auto;
+	display: block;
+}
+
+#prof_img {
+	float: left;
+	vertical-align: middle;
+	display: inline;
+	border-radius: 50px;
+}
+
+#prof_info_sub {
+	float: right;
+	height: 100%;
+	width: 50%;
+	line-height: 50px;
+	margin-right: 50px;
+	text-align: center;
+	vertical-align: middle;
+	display: inline;
+}
+
+#prof_info_sub div {
+	font-size: 12pt;
+}
+
+
+#img_change_btn {
+	margin: 0;
+	cursor: pointer;
+	color: #3399ff;
+	font-weight: bold;
+}
