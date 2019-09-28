@@ -169,7 +169,7 @@ public class UsersDAO {
 					uimg = rs.getString("uimg");
 				list.add(rs.getString("pimg")); // 삭제 대상에 post사진 경로 추가
 			}
-			if (!uimg.equals("./userpic/default.jpg")) // 프사가 디폴트 이미지가 아니면
+			if (!uimg.equals("./userpic/default.png")) // 프사가 디폴트 이미지가 아니면
 				list.add(uimg); // 삭제 대상에 프사 경로 추가
 		} catch (Exception e) {
 			e.printStackTrace();

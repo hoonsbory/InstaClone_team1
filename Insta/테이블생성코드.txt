@@ -1,0 +1,58 @@
+drop table follower_map;
+drop table likes;
+drop table comments;
+drop table posts;
+drop table users;
+
+create table users (
+    id number(15) primary key,
+    email varchar(50) unique,
+    password varchar(100),
+    name varchar(50),  
+    img   varchar(200) default  './userpic/default.png',
+    info varchar2(200)
+);
+
+
+create table posts(
+    id number(15) primary key,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    content varchar(500),
+    user_id number(15),
+    img varchar(100)
+);
+
+
+
+
+create table comments(
+    id number(15) primary key,
+    content varchar(500),
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    post_id number(15),
+    user_id number(15)
+);
+
+
+create table likes(
+    user_id number(15),
+    post_id number(15),
+     timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+create table follower_map(
+    id varchar2(100) primary key,
+    target_id number(15),
+    follower_id number(15),
+timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+   fcheck varchar(10) default 'f'
+);
+
+
+alter table posts add constraint posts_id_fk foreign key(user_id)  references users on delete cascade;
+alter table comments add constraint comments_postid_fk foreign key(post_id)  references posts on delete cascade;
+alter table comments add constraint comments_userid_fk foreign key(user_id)  references users on delete cascade;
+alter table likes add constraint likes_postid_fk foreign key(post_id)  references posts on delete cascade;
+alter table likes add constraint likes_userid_fk foreign key(user_id)  references users on delete cascade;
+alter table follower_map add constraint follow_target_fk foreign key(target_id)  references users on delete cascade;
+alter table follower_map add constraint follow_follower_fk foreign key(follower_id)  references users on delete cascade;
