@@ -95,8 +95,8 @@
 	border-bottom: 1px solid #efefef;
 	text-decoration: none;
 	float : left;	
-	z-index : 2;
-	
+	width : 220px !important;
+	cursor: pointer;
 }
 .aSearchf{
 	padding-bottom: 8px;
@@ -106,13 +106,8 @@
 	border-bottom: 1px solid #efefef;
 	text-decoration: none;
 	float : left;	
-	z-index : 2;
-	width : 200px !important;
-	
-}
-.aSearch:hover{
-	background-color: #fafafa;
-	text-decoration: none;
+	width : 220px !important;
+	cursor: pointer;
 }
 .SearchImg{
 	margin-right : 10px;
@@ -396,6 +391,7 @@
 	width : 35px;
 	height : 35px;
 	margin : 0 auto;
+	cursor: pointer;
 }
 .back{
 	align-items: center;

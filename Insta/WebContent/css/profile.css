@@ -125,17 +125,30 @@ img {
     padding: 0 2.4rem;
     margin-left: 2rem;
 }
-.follow-btn{
+#follow-btn2{
 	font-size: 1.6rem;
-	color: white;
+	color:#3399ff;
 	line-height:2;
-	border:0.2rem solid #0080ff;
+	border:0.2rem solid #3399ff;
 	border-radius:0.3rem;
 	padding: 0 2rem;
 	margin-left: 2rem;
-	background-color: #0080ff;
+	background-color: rgba(0,0,0,0);
 	
 }
+
+
+#follow-btn{
+	font-size: 1.6rem;
+	color: white;
+	line-height:2;
+	border:0.2rem solid #3399ff;
+	border-radius:0.3rem;
+	padding: 0 2rem;
+	margin-left: 2rem;
+    background-color: #3399ff;
+}
+
 .profile-stats{
 	margin-top:2.3rem;
 }

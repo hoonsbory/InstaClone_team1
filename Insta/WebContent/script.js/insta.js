@@ -352,6 +352,7 @@ $('#followerlist').click(function(){
 			let count2 = 0;
 		for(var i = 1; i<data.length+1; i++){
 			let aSearch = document.createElement('a');
+			let centerdiv = document.createElement('div');
 			let SearchImg = document.createElement('div');
 			let userimg = document.createElement('img');
 			let divName = document.createElement('div');
@@ -369,7 +370,8 @@ $('#followerlist').click(function(){
 	fbtn1.setAttribute("style" , "display:none");
 	fbtn2.setAttribute("style" , "display:none");
 	
-	
+	centerdiv.setAttribute("class" , "centerdiv");
+	centerdiv.setAttribute("id" , "centerdiv2"+i);
 	aSearch.setAttribute("class" , "aSearch");
 	aSearch.setAttribute("id" , "aSearch2"+i);
 	aSearch.setAttribute("href" , "search.do?id="+data[count2].id);
@@ -382,10 +384,10 @@ $('#followerlist').click(function(){
 	divEmail.setAttribute("id" , "divEmail2"+i)
 	EmailSpan.setAttribute("class" , "EmailSpan")
 	EmailSpan.setAttribute("id" , "EmailSpan2"+i)
-		document.querySelector('.followerlist_class').appendChild(aSearch);
-	
-	document.querySelector('.followerlist_class').appendChild(fbtn2);
-	document.querySelector('.followerlist_class').appendChild(fbtn1);
+	document.querySelector('.followerlist_class').appendChild(centerdiv);
+	document.querySelector('#centerdiv2'+i).appendChild(aSearch);
+	document.querySelector('#centerdiv2'+i).appendChild(fbtn2);
+	document.querySelector('#centerdiv2'+i).appendChild(fbtn1);
 		
 		document.querySelector('#aSearch2'+i).appendChild(SearchImg);
 		
@@ -420,7 +422,7 @@ $('#followerlist').click(function(){
 					$('.profile-edit-btn2').show();
 				}else{
 					$('.profile-edit-btn2').hide();
-					$('.profile-edit-btn').show();
+					$('.profile-edit-btn3').show();
 				}
 			}),
 			error : ((e)=>{
@@ -450,7 +452,7 @@ $('#followerlist').click(function(){
 				url : 'follow2.jsp',
 				type : 'get',
 				dataType : 'json',
-				data : {yourid : va ,
+				data : {yourid : va
 						
 				},
 				
