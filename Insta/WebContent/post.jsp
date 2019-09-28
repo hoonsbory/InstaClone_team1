@@ -499,7 +499,7 @@ function display(data){
 			</span>
 			<c:if test='${post.user_id ne id}'>
 				<button class="btn profile-edit-btn" id="follow-btn" >팔로우</button>
-				<button class="btn profile-edit-btn" id="follow-btn2" >팔로잉 중</button>
+				<button class="btn profile-edit-btn" id="follow-btn2" >팔로잉</button>
 			</c:if>
 		</header>
 

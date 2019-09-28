@@ -269,7 +269,7 @@ window.onload = function(){
 					<input type="submit" class="follow-btn" value="팔로우">
 					</form> --%>
 					<button class="btn profile-edit-btn" id="follow-btn" >팔로우</button>
-					<button class="btn profile-edit-btn" id="follow-btn2" >팔로잉 중</button>
+					<button class="btn profile-edit-btn" id="follow-btn2" >팔로잉</button>
 
 
 				</div>
