@@ -222,6 +222,7 @@ $('#btnEdit').click(()=>{
 				
 				$('.realbtn').click(()=>{
 					$('#backfollow').css('display', 'none');
+					$('.aSearchf').remove();
 					
 					
 				})
@@ -327,6 +328,7 @@ $('#btnEdit').click(()=>{
 })
 $('#followerlist').click(function(){
 		let idnum;
+		let countf = 1;
 	$('#backfollower').css('display', 'block');
 		$.ajax({
 			url : 'followerlist.jsp',
@@ -346,7 +348,7 @@ $('#followerlist').click(function(){
 				
 				$('.realbtn').click(()=>{
 					$('#backfollower').css('display', 'none');
-					
+					$('.aSearchf').remove();
 					
 				})
 			let count2 = 0;
@@ -372,7 +374,7 @@ $('#followerlist').click(function(){
 	
 	centerdiv.setAttribute("class" , "centerdiv");
 	centerdiv.setAttribute("id" , "centerdiv2"+i);
-	aSearch.setAttribute("class" , "aSearch");
+	aSearch.setAttribute("class" , "aSearchf");
 	aSearch.setAttribute("id" , "aSearch2"+i);
 	aSearch.setAttribute("href" , "search.do?id="+data[count2].id);
 	
@@ -418,12 +420,11 @@ $('#followerlist').click(function(){
 			data : {"yourid" : idnum},
 			success : ((data1)=>{
 				if(data1==1){
-					$('.profile-edit-btn3').hide();
-					$('.profile-edit-btn2').show();
+					$('#follow-btn2'+countf).show();
 				}else{
-					$('.profile-edit-btn2').hide();
-					$('.profile-edit-btn3').show();
+					$('#follow-btn3'+countf).show();
 				}
+				countf++;
 			}),
 			error : ((e)=>{
 				
